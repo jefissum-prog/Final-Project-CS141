@@ -14,29 +14,33 @@ public class ClearMind {
             "██ ▀▀▄█▄▄█▄▄▄█▄██▄█▄█▄▄████ ███ █▄▄▄█▄██▄█▄▄███\n" +
             "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
 
-    // menu loop
     while (true) {
-      printMenu();
-      int choice = scanner.nextInt();
+        printMenu();
 
-      switch(choice) {
-        case 1:
-          MentalHealthQuiz.takeStressCheck();
-          testCounter++;
-          break;
-        //case 2: dummyFunction(); break;
-        //case 3: dummyFunction(); break;
-        case 4: checklastScores();
-          break;
-        //case 5: dummyFunction(); break;
-        case 6: 
-          System.out.println("\nGoodbye.");
-          return; // stop the main function
-        default: System.out.println("\nInvalid input. Please try again.");
-      }
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // consume leftover newline
+
+        switch (choice) {
+            case 1:
+                System.out.println("Case 1 works");
+                break;
+            case 2:
+                System.out.println("Placeholder");
+                break;
+            case 3:
+                AffirmationGenerator.printAffirmation();
+                break;
+            case 4:
+                System.out.println("Case 4 works");
+                break;
+            case 6:
+                System.out.println("Goodbye.");
+                return;
+            default:
+                System.out.println("Invalid input. Please try again.");
+        }
     }
   }
-
   public static void printMenu() {
     System.out.println("\n================== Main Menu ==================\n");
     System.out.println("1. Take Mental Health Quiz");
@@ -59,3 +63,4 @@ public class ClearMind {
     }
   }
 }
+
